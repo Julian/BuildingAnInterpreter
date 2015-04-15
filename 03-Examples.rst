@@ -49,3 +49,5 @@ complexity. Try not to be flustered by it, we clone them now for two reasons:
     * both repos are large -- we might want to take quick looks at PyPy later
       in the day, so we'll clone them up front. Feel free to leave the clone
       running in the background while we proceed.
+
+You can find Topaz at https://github.com/topazproject/topaz
