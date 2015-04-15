@@ -36,7 +36,7 @@ pair of interpreters to reference. In order of complexity, we have:
 
     * the example interpreter implementing a toy language similar to our own
 
-    * CyCy implementing (the small subset of) C
+    * CyCy implementing (a small subset of) C
 
 While we're looking at interpreters, clone the Topaz and PyPy interpreters as
 well. These interpreters are full-blown (real-world) projects with all of the
@@ -51,3 +51,14 @@ complexity. Try not to be flustered by it, we clone them now for two reasons:
       running in the background while we proceed.
 
 You can find Topaz at https://github.com/topazproject/topaz
+
+
+Other Resources
+---------------
+
+There are a number of other resources that will be useful as we work:
+
+* `the RPython documentation <http://rpython.readthedocs.org/en/latest/>`_
+
+* the #pypy IRC channel on Freenode. See http://webchat.freenode.net/ to
+  connect if you do not already have an IRC client
