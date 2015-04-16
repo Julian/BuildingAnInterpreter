@@ -41,3 +41,37 @@ The interpretation of these three instructions are:
 
 The non-human readable version should use simple bytes to represent the
 actual instructions ultimately, which the VM will then dispatch on.
+
+
+First Steps
+-----------
+
+Your compiler should operate on an AST, and ultimately will produce bytecode: a
+simple sequence of bytes which our upcoming VM will execute.
+
+In fairly typical OO style, generally it will simply delegate to each of
+your AST nodes for compilation, in which case each node will know how to
+compile itself.
+
+We'll need to store state during our compilation process. We need at
+least a place to store variables and one to store constants that the
+bytecode we generate will reference.
+
+For example, a simple constant node like the one we'll need for integers
+or strings should compile itself by simply registering itself as a
+constant on an object that is keeping context for the compilation.
+
+In the bytecode we will emit, loading this constant for use on the stack
+will consist of accessing an appropriate element within the registered
+constants list.
+
+Write your first compiler test! There are (at least) two ways to test
+your compiler. One is in integration with your parser, by asserting that
+some inputted source code parses and then compiles into an expected
+piece of bytecode. The other is to test direct compilation of an AST.
+
+Try out both methods and see which you find easier to read. You may also
+find it convenient to have a way to produce human-readable bytecode
+dumping for your bytecode, which should produce output similar to
+our first example above, or to what you'd get out of the `dis module
+<https://docs.python.org/2/library/dis.html>`_.
