@@ -112,3 +112,15 @@ debugging), it's useful to set yourself up for easy debugging of your parser.
 
 Give your AST nodes a helpful ``__repr__`` and see what you can do in regular
 Python to help yourself as you go along.
+
+
+A Look Ahead
+------------
+
+In a coming exercise we'll begin writing a simple `REPL
+<http://en.wikipedia.org/wiki/Read%E2%80%93eval%E2%80%93print_loop>`_,
+similar to the Python REPL (or CyCy REPL).
+
+You might want to look ahead and implement a simple repl that simply can
+display the AST for the inputted source code, which may be helpful as
+you move forward.
