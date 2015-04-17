@@ -86,10 +86,11 @@ Translation
 -----------
 
 Let's not forget about translation! Generally speaking, you should
-attempt to translate your code not after *every* change or commit (it's
-tedious and long as you'll soon notice). Rely on your tests to check
-that your code works, then simply periodically attempt to translate, and
-fix any invalid RPython you've introduced since the last time.
+*not* necessarily attempt to translate your code not after change or
+commit (it's tedious and long as you'll soon notice). Rely on your tests
+to check that your code works, then simply periodically attempt to
+translate, and fix any invalid RPython you've introduced since the last
+time.
 
 Let's set up enough to be able to translate our project and check if
 it's valid RPython. Recall that translation only operates on code paths
@@ -119,6 +120,10 @@ of your parser.
 
 Give your AST nodes a helpful ``__repr__`` and see what you can do in
 regular Python to help yourself as you go along.
+
+You've likely already implemented ``__eq__`` and ``__ne__`` methods on
+your nodes to get your tests to pass. These too do not need to be valid
+RPython since they likely will only be used in tests.
 
 
 A Look Ahead
