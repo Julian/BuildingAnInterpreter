@@ -29,3 +29,42 @@ The most important things to remember from the start are:
 
 Unfortunately the most important rule though is the one at the top of the
 documentation, that if it translates, it's valid, and if it ain't, it isn't.
+
+
+Two Specific Notes
+------------------
+
+Besides the above, there are two specific things which you might find
+surprising initially that are worth learning upfront.
+
+Firstly, the RPython toolchain will expect an entry point similar to
+the one expected when writing C code. By default it will expect a
+function called ``main`` in the file you pass to the ``rpython`` binary
+(explained shortly). The function should return an ``int`` as ``main``
+would in C. This is where the translation process which we'll discuss
+(as well as your interpreter) will begin.
+
+Secondly, the ``assert`` statement in RPython has special semantics. Whereas in
+Python it is generally used to describe invariants that should never be false
+in a piece of code, in RPython it *additionally* makes an assertion of that
+invariant *to the toolchain itself* so that the toolchain can make use of that
+information.
+
+As a quick example, you'll likely soon notice once we begin writing our parser
+that the toolchain will complain during translation if for instance you have::
+
+
+    class Parent(object):
+       ...
+
+    class ChildA(Parent):
+       attr_only_on_this_child = 12
+
+    class ChildB(Parent):
+       ...
+
+and you try and access ``attr_only_on_this_child`` even if you only pass in
+instances of ``ChildA``. You will need to tell the toolchain that you are
+*guaranteeing* that only instances of ``ChildA`` will be there, and not
+``ChildB``, and the way to do so is by saying ``assert isinstance(myinstance,
+ChildA)``, which signals that exact fact.
