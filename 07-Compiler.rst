@@ -49,21 +49,28 @@ First Steps
 Your compiler should operate on an AST, and ultimately will produce bytecode: a
 simple sequence of bytes which our upcoming VM will execute.
 
-In fairly typical OO style, generally it will simply delegate to each of
-your AST nodes for compilation, in which case each node will know how to
-compile itself.
+In fairly typical OO style, generally it will simply delegate to each
+of your AST nodes for compilation, in which case each node will know
+how to compile itself by producing a sequence of our bytecode that it
+corresponds to.
 
 We'll need to store state during our compilation process. We need at
 least a place to store variables and one to store constants that the
 bytecode we generate will reference.
 
-For example, a simple constant node like the one we'll need for integers
-or strings should compile itself by simply registering itself as a
-constant on an object that is keeping context for the compilation.
+For a concrete example, a simple constant node like the one we'll need
+for integers or strings should compile itself by simply registering
+itself as a constant on an object that is keeping context for the
+compilation. It should then emit a bytecode that when executed will
+retrieve the corresponding constant from the context object.
 
 In the bytecode we will emit, loading this constant for use on the stack
-will consist of accessing an appropriate element within the registered
-constants list.
+will consist of accessing an appropriate element within a registered
+constants list by index.
+
+
+Compiler Tests
+--------------
 
 Write your first compiler test! There are (at least) two ways to test
 your compiler. One is in integration with your parser, by asserting that
