@@ -41,6 +41,9 @@ much about it), so create the function that will parse your AST and make
 your example test pass by simply giving it a fake implementation that
 simply returns the (overall) AST we want for our example program.
 
+We'll now build out our parser in small chunks until we successfully can parse
+the above program.
+
 
 RPly and an Actual Start to Our Parser
 --------------------------------------
