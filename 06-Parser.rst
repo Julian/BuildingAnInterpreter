@@ -26,9 +26,10 @@ will represent the first sample of this piece of code as the following
 
     Assign("foo", BinaryOperation("+", Integer(2), Integer(7)))
 
-See if you can write a (failing) test case that asserts that the result of
-parsing the above source should produce that AST. You'll need to create a few
-classes corresponding to the various node types in your AST.
+See if you can write a (failing) test case that asserts that the result
+of parsing the above source should produce that AST. You'll need to
+create a few classes corresponding to the various node types in your
+AST.
 
 .. note::
 
@@ -41,8 +42,8 @@ much about it), so create the function that will parse your AST and make
 your example test pass by simply giving it a fake implementation that
 simply returns the (overall) AST we want for our example program.
 
-We'll now build out our parser in small chunks until we successfully can parse
-the above program.
+We'll now build out our parser in small chunks until we successfully can
+parse the above program.
 
 
 RPly and an Actual Start to Our Parser
@@ -58,18 +59,19 @@ a slightly nicer API.
 
 There are only two pages of documentation, so have a quick read through
 them to see how you will likely want to proceed. You'll likely find
-consulting the CyCy parser helpful minutes as well but try and wait until
-you're off the ground.
+consulting the CyCy parser helpful minutes as well but try and wait
+until you're off the ground.
 
-You may want to consult additional resources on EBNF notation if this is your
-first exposure to it. For our purposes superficial knowledge should suffice
-until you want to extend the parser (later) as well, so it can also wait.
+You may want to consult additional resources on EBNF notation if this is
+your first exposure to it. For our purposes superficial knowledge should
+suffice until you want to extend the parser (later) as well, so it can
+also wait.
 
-Break down the things you will need to parse into smaller chunks, write unit
-tests for the (small AST) that will result from parsing them, and then
-implement enough of a parser to make your tests pass, extending your
-implementation at each step. For example, you might want to take the following
-path:
+Break down the things you will need to parse into smaller chunks, write
+unit tests for the (small AST) that will result from parsing them, and
+then implement enough of a parser to make your tests pass, extending
+your implementation at each step. For example, you might want to take
+the following path:
 
     * Parse integer literals
     * Parse sums of integers
@@ -97,11 +99,12 @@ fully utilize Python.
 
 .. note::
 
-    If you forgot about the type unification requirement of RPython, you'll
-    likely see your first translation error with your AST nodes!
+    If you forgot about the type unification requirement of RPython,
+    you'll likely see your first translation error with your AST nodes!
 
-    These errors are cryptic, but if you stare at them and trust them for long
-    enough, they often are clear enough to point you in the right direction.
+    These errors are cryptic, but if you stare at them and trust them
+    for long enough, they often are clear enough to point you in the
+    right direction.
 
     See if you can solve your error.
 
@@ -109,12 +112,13 @@ fully utilize Python.
 More About non-RPython
 ----------------------
 
-With the above note again in mind about translation operating only on code
-paths your interpreter will traverse (and not ones used only during tests or
-debugging), it's useful to set yourself up for easy debugging of your parser.
+With the above note again in mind about translation operating only on
+code paths your interpreter will traverse (and not ones used only during
+tests or debugging), it's useful to set yourself up for easy debugging
+of your parser.
 
-Give your AST nodes a helpful ``__repr__`` and see what you can do in regular
-Python to help yourself as you go along.
+Give your AST nodes a helpful ``__repr__`` and see what you can do in
+regular Python to help yourself as you go along.
 
 
 A Look Ahead
@@ -124,6 +128,6 @@ In a coming exercise we'll begin writing a simple `REPL
 <http://en.wikipedia.org/wiki/Read%E2%80%93eval%E2%80%93print_loop>`_,
 similar to the Python REPL (or CyCy REPL).
 
-You might want to look ahead and implement a simple repl that simply can
+You might want to look ahead and implement a simple REPL that simply can
 display the AST for the inputted source code, which may be helpful as
 you move forward.
