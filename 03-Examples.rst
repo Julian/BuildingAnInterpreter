@@ -36,19 +36,21 @@ pair of interpreters to reference. In order of complexity, we have:
 
     * the example interpreter implementing a toy language similar to our own
 
-    * CyCy implementing (a small subset of) C
+    * CyCy implementing a small subset of C
 
-While we're looking at interpreters, clone the Topaz and PyPy interpreters as
-well. These interpreters are full-blown (real-world) projects with all of the
+Let's also clone the Topaz and PyPy interpreters as well. These
+interpreters are full-blown (real-world) projects with all of the
 considerations that brings, so they come with huge additional levels of
-complexity. Try not to be flustered by it, we clone them now for two reasons:
+complexity. Try not to be flustered by it, we clone them now for two
+reasons:
 
-    * familiarity with Python might in some way provide additional guidance if
-      you can manage to find the associated implementation in PyPy
+    * familiarity with Python might in some way provide additional
+      guidance if you can manage to find the associated implementation in
+      PyPy
 
-    * both repos are large -- we might want to take quick looks at PyPy later
-      in the day, so we'll clone them up front. Feel free to leave the clone
-      running in the background while we proceed.
+    * both repos are large -- we might want to take quick looks at PyPy
+      later in the day, so we'll clone them up front. Feel free to leave
+      the clone running in the background while we proceed.
 
 You can find Topaz at https://github.com/topazproject/topaz
 
