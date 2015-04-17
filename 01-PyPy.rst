@@ -2,6 +2,13 @@
 PyPy
 ====
 
+Besides being the most prominent example of an interpreter written in
+RPython, having been the interpreter for which RPython was developed, we
+will also use PyPy in order to actually translate our own interpreter,
+which we will discuss later.
+
+Below are brief instructions for installing and running PyPy.
+
 
 Installing PyPy
 ---------------
@@ -42,5 +49,5 @@ Running PyPy
 
 As with CPython, the REPL is accessible via ``pypy`` at a terminal.
 
-Feel free to play around a bit, whereby you'll (hopefully!) notice nothing
-amiss.
+Feel free to play around a bit if you've never done so already, whereby
+you'll (hopefully!) notice nothing amiss.
