@@ -2,6 +2,20 @@
 CyCy
 ====
 
+CyCy is a small C interpreter built during a `48 hour hackathon
+<http://tech.magnetic.com/2015/03/magnetics-inaugural-hackathon.html>`_
+at `Magnetic <http://www.magnetic.com/>`_.
+
+It certainly does not interpret an appreciable amount of C, nor does
+it run particularly quickly, but it's a small step beyond the example
+interpreter (which we'll also see soon).
+
+It is highly recommended to resist temptation on directly copying its
+layout (or the layout of the example interpreter) line for line. Reading
+it briefly and using it as a reference when stuck will allow you to
+proceed without (much) frustration while still taking time to play with
+RPython enough to experience it.
+
 
 Installing CyCy
 ---------------
