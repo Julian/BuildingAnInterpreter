@@ -4,7 +4,7 @@ An Interpreter
 
 Finally! It's time to actually execute some code.
 
-We have bytecode, which essentially is a "tape"-like sequence of instructions
+We have bytecode, which essentially is a tape-like sequence of instructions
 that we will interpret. We've casted our (potentially) complicated language
 into a sequence of simple stack manipulation operations.
 
@@ -17,12 +17,15 @@ The Main Loop
 -------------
 
 Interpreting bytecode will take place within a main loop similar to the
-CPython VM's main loop (``ceval.c``) or PyPy's main loop.
+`CPython VM's main loop <https://github.com/python/cpython/blob/2.7/Python/ceval.c#L1102>`_
+or `PyPy's main loop <https://bitbucket.org/pypy/pypy/src/a69d4a5a96389cf0d5478ff9fad898e52153fa92/pypy/interpreter/pyopcode.py?at=default#cl-177>`_.
+A giant loop that simply performs whatever bytecode instruction is at the
+current position we're processing.
 
-A "program counter" will keep track of which position within our bytecode we're
-interpreting. Our interpreter will read sequentially through the bytecode
-sequence, possibly moving the program counter to some other position (if you
-implement a jump or conditional expression in a later exercise).
+A program counter should keep track of that position within our
+bytecode. Our interpreter will read sequentially through the bytecode
+sequence, possibly moving the program counter to some other position (if
+you implement a jump or conditional expression in a later exercise).
 
 Along with a stack (an RPython list), we'll implement our plan.
 
