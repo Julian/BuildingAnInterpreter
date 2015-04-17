@@ -61,6 +61,9 @@ Other Resources
 There are a number of other resources that will be useful as we work:
 
 * `the RPython documentation <http://rpython.readthedocs.org/en/latest/>`_
+  which you'll likely want to keep open for reference throughout the tutorial
 
-* the #pypy IRC channel on Freenode. See http://webchat.freenode.net/ to
-  connect if you do not already have an IRC client
+* the #pypy IRC channel on Freenode which you might like to join,
+  especially if you have an issue that we can't figure out in person. See
+  http://webchat.freenode.net/ to connect if you do not already have an
+  IRC client.
