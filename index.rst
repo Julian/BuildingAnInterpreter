@@ -5,6 +5,10 @@ Building an Interpreter with the RPython Toolchain
 This repository contains introductory material on building a simple interpreter
 with `RPython <http://rpython.readthedocs.org/en/latest/index.html>`_.
 
+The original `slides
+<https://docs.google.com/presentation/d/1Wrtik27xcjGLfa0xJNSLyqUpWMsnDYwfbIbvid_MFME/>`_
+are also available.
+
 
 Contents:
 
